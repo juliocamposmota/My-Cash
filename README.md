@@ -35,9 +35,19 @@
 
 Landing page
 
-<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/layout_top.JPG">
-<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/layout_bottom.JPG">
+<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/lp-image1.PNG">
+<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/lp-image2.PNG">
+<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/lp-image3.PNG">
 
+Sobre page
+
+<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/sobre-image1.PNG">
+<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/sobre-image2.PNG">
+
+Mecânica page
+
+
+<img src="https://github.com/juliocamposmota/My-Cash/blob/main/github/mecanica-image1.PNG">
 ## Como rodar a aplicação :arrow_forward:
 
 1. Instalar e configurar um servidor XAMPP
