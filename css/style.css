@@ -9,67 +9,134 @@ html, body{
 	height: 100%;
 }
 
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
 .clear{
 	clear: both;
 }
 
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: 50%;
+}
+
 .center{
-	max-width: 1280px;
+	max-width: 1400px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 2%;
 }
 
-.header{
-	width: 100%;
-	padding: 0 2%;
-	height: 70px;
-	background-color: #6e6e6e;
+/* Init header*/
+
+header{
+	background-color: rgb(240,240,240);
 }
 
-.header > .center{
-	height: 100%;
+div.logo {
+	padding: 10px 2%;
 }
 
-.img{
-	width: 60px;
-	height: 44px;
-	float: left;
-	margin-top: 13px;
-	background-image: url('../imagens/logo.png');
-	background-size: cover;
-	background-position: center;
+div.logo img{
+	width: 90px;
 }
 
-.menu{
-	float: right;
-	width: auto;
+nav.desktop{
+	padding: 35px 2%;
+}
+
+nav.desktop ul{
 	text-align: right;
-	padding: 20px 0;
+	list-style-type: none;
 }
 
-.a{
+nav.desktop li{
+	margin: 0 20px;
 	display: inline-block;
+	transition: 1s;
 }
 
-.menu a{
+nav.desktop li:hover{
+	text-decoration: underline;
+}
+
+nav.desktop a{
+	color: rgb(90,90,90);
 	text-decoration: none;
-	color: #e6e6e6;
-	margin-left: 13px;
-	font-size: 18px;
-	font-weight: 500;
 }
 
-.container-banner{
+nav.mobile{
+	width: 28px;
+	height: 28px;
+	margin: 34px 2%;
+	cursor: pointer;
+	background-size: cover;
+	background-image: url('../images/icon_menu.png');
+	display: none;
+}
+
+nav.mobile ul{
+	width: 100%;
+	position: absolute;
+	top: 95px;
+	left: 0;
+	text-align: center;
+	border-bottom: 3px solid rgb(140,140,140);
+	border-top: 1px solid rgb(140,140,140);
+	background-color: rgb(240,240,240);
+	opacity: 0;
+	transition: 1s;
+}
+
+nav.mobile:hover ul{
+	opacity: 1;
+}
+
+nav.mobile li{
+	padding: 10px 0;
+	transition: 1s;
+	border-bottom: 1px solid rgb(140,140,140);
+}
+
+nav.mobile li:hover{
+	background-color: rgb(220,220,220);
+}
+
+nav.mobile li:nth-of-type(3){
+	border-bottom: 0;
+}
+
+nav.mobile a{
+	color: rgb(90,90,90);
+	text-decoration: none;
+}
+
+/* End header */
+
+/* Init main*/
+
+/* ---------- INIT INDEX ------- */
+	/* Init banner form */
+
+section.container-banner{
 	width: 100%;
 	height: 557px;
 	padding: 0 2%;
 	background-size: cover;
 	background-position: center;
-	background-image: url("../imagens/imagem4.jpg");
+	background-image: url("../images/imagem4.jpg");
 }
 
-.container-banner > .center{
+section.container-banner > .center{
 	height: 100%;
 }
 
@@ -84,7 +151,7 @@ html, body{
 .form h2{
 	font-size: 19px;
 	font-weight: normal;
-	color: #6e6e6e;
+	color: rgb(90,90,90);
 }
 
 .input-container{
@@ -94,11 +161,12 @@ html, body{
 .input-container span, .form p{
 	display: inline-block;
 	width: 100%;
-	color: #6e6e6e;
+	color: rgb(90,90,90);
 	font-size: 17px;
 }
 
 .form p{
+	font-size: 12px;
 	margin: 20px 0;
 }
 
@@ -108,6 +176,7 @@ html, body{
 	height: 40px;
 	border: 1px solid #ccc;
 	font-size: 15px;
+	padding-left: 8px;
 }
 
 .form .submit-container{
@@ -130,10 +199,14 @@ html, body{
 	background-color: #44752e;
 }
 
+	/* End banner form */
+
+	/* Init sobre */
+
 .container-sobre{
 	padding: 30px 2%;
 	text-align: center;
-	background-color: #ddd;
+	background-color: rgb(240,240,240);
 }
 
 .container-sobre p{
@@ -143,6 +216,10 @@ html, body{
 	text-align: justify;
 }
 
+.container-sobre h2, .container-sobre p{
+	color: rgb(90,90,90);
+}
+
 .container-sobre img{
 	width: 490px;
 	height: 275px;
@@ -150,10 +227,18 @@ html, body{
 	float: right;
 }
 
+	/* End sobre */
+
+	/* Init passos */
+
 .container-passos{
 	width: 100%;
 	padding: 30px 2%;
 	text-align: center;
+}
+
+.container-passos h2, .container-passos h3, .container-passos p{
+	color: rgb(90,90,90);
 }
 
 .container-passos h3{
@@ -186,17 +271,99 @@ html, body{
 	width:80px;
 }
 
-.footer{
-	background-color: #6e6e6e;
-	padding: 15px 2%;
+	/* end passos */
+
+/* ---------- END INDEX ------- */
+
+/* ---------- INIT SOBRE ------- */
+
+section.sobre{
+	width: 100%;
+	padding: 30px 2%;
+	color: rgb(90,90,90);
+}
+
+section.sobre p{
+	text-align: justify;
+	line-height: 28px;
+}
+
+div.container1{
 	text-align: center;
 }
 
-.footer p{
-	color: white;
-	font-weight: 100;
+div.container1 img{
+	width: 75%;
+	margin-top: 30px;
+}
+
+div.container2 h2{
+	margin: 30px 0;
+}
+
+div.container3 img{
+	float: left;
+	width: 60%;
+	padding: 30px 30px 30px 0;
+}
+
+div.container3 p{
+	float: right;
+	width: 40%;
+	margin: 30px 0;
+}
+
+
+/* ---------- END SOBRE ------- */
+
+/* ---------- INIT MECANICA ------- */
+
+/* ---------- END MECANICA ------- */
+
+/* end main */
+
+/* init footer */
+
+footer{
+	height: 80px;
+	background-color: rgb(240,240,240);
+}
+
+.menu, .direitos{
+	padding: 30px 2%;
+}
+
+nav.menu ul{
+	text-align: left;
+	list-style-type: none;
+}
+
+nav.menu li{
+	margin: 0 20px;
+	display: inline-block;
+	transition: 1s;
+}
+
+nav.menu li:hover{
+	text-decoration: underline;
+}
+
+nav.menu li a{
+	color: rgb(90,90,90);
+	text-decoration: none;
+}
+
+footer div.direitos{
+	text-align: right;
+}
+
+footer p{
+	color: rgb(90,90,90);
+	font-weight: 500;
 	font-size: 14px;
 }
+
+/* end footer */
 
 @media screen and (max-width: 1024px){
 	.container-sobre p{
@@ -216,23 +383,19 @@ html, body{
 }
 
 @media screen and (max-width: 774px){
-	.header{
-		height: auto;
-		padding: 10px 2%;
+		/* Init Header */
+
+	nav.desktop{
+		display: none;
 	}
 
-	.img{
-		float: none;
-		margin-top: 0;
-		margin: 10px auto;
+	nav.mobile{
+		display: block;
 	}
 
-	.menu{
-		float:none;
-		width: 100%;
-		text-align: center;
-		border-top: 2px solid gray;
-	}
+	/* End header */
+
+	/* ini main */
 
 	.container-banner{
 		padding:0 2%;
@@ -253,17 +416,42 @@ html, body{
 		width: 50%;
 		height: 300px;
 	}
+
+	/* end main*/
+
+	/* init footer */
+
+	footer{
+		height: auto;
+	}
+
+	footer nav.menu{
+		float: none;
+		width: 100%;
+	}
+
+	footer nav.menu ul{
+		text-align: center;
+	}
+
+	footer div.direitos{
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	/* end footer */
+
 }
 
 @media screen and (max-width: 425px){
-	.menu{
-		padding: 20px 0 0 0;
+	/* Init header */
+
+	nav.desktop li{
+		margin: 0 10px;
 	}
 
-	.a{
-		display: block;
-		margin: 5px 0;
-	}
+	/* End header */
 
 	.container-single{
 		width: 100%;
@@ -272,6 +460,10 @@ html, body{
 
 	h2{
 		font-size: 20px;
+	}
+
+	nav.menu li{
+		margin: 0 10px;
 	}
 }
 
@@ -284,7 +476,4 @@ html, body{
 		width: 70%;
 	}
 
-	.footer p{
-		font-size: 12px;
-	}
 }
